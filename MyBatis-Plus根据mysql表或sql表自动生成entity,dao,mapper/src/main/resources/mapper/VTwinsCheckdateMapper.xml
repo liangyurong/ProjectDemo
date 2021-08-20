@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sdyb.twinscheck.mapper.VTwinsCheckdateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.sdyb.twinscheck.entity.VTwinsCheckdate">
+        <result column="name" property="name" />
+        <result column="idNo" property="idNo" />
+        <result column="resultDetail" property="resultDetail" />
+        <result column="checkDate" property="checkDate" />
+        <result column="result" property="result" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        name, idNo, resultDetail, checkDate, result
+    </sql>
+
+</mapper>

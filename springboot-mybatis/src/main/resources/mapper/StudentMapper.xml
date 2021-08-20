@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    namespace:是接口的全类名
+    增删改的返回类型都是int，resultType的返回值可以不写
+    findAll()方法，查找全部学生，返回值类型是List，但是List的泛型写的是Student，因此resultType写的是Student
+-->
+<mapper namespace="com.lyr.dao.StudentDao">
+    <!--返回值类型写的是集合里面泛型的类型，也就是Student-->
+    <select id="findAll" resultType="com.lyr.entity.Student">
+        select * from student
+    </select>
+
+    <select id="findById" parameterType="int" resultType="com.lyr.entity.Student">
+        select * from student where id=#{id}
+    </select>
+
+    <insert id="save" parameterType="com.lyr.entity.Student">
+        insert into student(name,score,birthday) values (#{name},#{score},#{birthday})
+    </insert>
+
+    <delete id="deleteById" parameterType="int">
+        delete from student where id=#{id}
+    </delete>
+
+    <update id="update" parameterType="com.lyr.entity.Student">
+        update student set name = #{name},score = #{score},birthday=#{birthday} where id=#{id}
+    </update>
+</mapper>
