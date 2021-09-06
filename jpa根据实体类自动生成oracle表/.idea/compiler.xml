@@ -9,5 +9,8 @@
         <module name="jpa根据实体类自动生成oracle表" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jpa根据实体类自动生成oracle表" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

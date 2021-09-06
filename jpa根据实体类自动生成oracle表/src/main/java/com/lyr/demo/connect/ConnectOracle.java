@@ -14,9 +14,9 @@ public class ConnectOracle {
         // 3、创建一个结果集对象
         ResultSet result = null;
         // 4、数据库信息
-        String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-        String user = "system";
-        String password = "123456";
+        String url = "jdbc:oracle:thin:@159.75.209.135:1521:orcl";
+        String user = "C##YB_MED_OPENEHR";
+        String password = "zteict2017";
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
             System.out.println("开始尝试连接数据库！");
